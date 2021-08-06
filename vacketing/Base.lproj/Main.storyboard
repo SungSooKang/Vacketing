@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="vacketing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gzk-YN-myd">
+                                <rect key="frame" x="16" y="59" width="343" height="527"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cvE-nt-zLZ">
+                                <rect key="frame" x="14" y="20" width="347" height="32"/>
+                                <segments>
+                                    <segment title="현재 위치에서 검색"/>
+                                    <segment title="지도 위치에서 검색"/>
+                                    <segment title="장소 검색"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sgChangeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="A7Z-k3-fJp"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 위치" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-ju-ScY">
+                                <rect key="frame" x="16" y="594" width="343" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울시 관악구 신림동 10-375" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szC-e1-pjG">
+                                <rect key="frame" x="16" y="623" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eRQ-ju-ScY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Lf-6i-zTx"/>
+                            <constraint firstItem="cvE-nt-zLZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2gS-LM-q98"/>
+                            <constraint firstItem="cvE-nt-zLZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3hx-ni-o6V"/>
+                            <constraint firstItem="szC-e1-pjG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6e9-ZL-Oil"/>
+                            <constraint firstItem="gzk-YN-myd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Ia-Xp-2zt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gzk-YN-myd" secondAttribute="trailing" constant="16" id="BAh-Ku-utj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="szC-e1-pjG" secondAttribute="bottom" constant="23" id="BeC-qD-cX9"/>
+                            <constraint firstItem="gzk-YN-myd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HML-xe-NBH"/>
+                            <constraint firstItem="gzk-YN-myd" firstAttribute="top" secondItem="cvE-nt-zLZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Idw-O8-WXh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="szC-e1-pjG" secondAttribute="trailing" constant="16" id="Vi1-5r-bAW"/>
+                            <constraint firstItem="eRQ-ju-ScY" firstAttribute="top" secondItem="gzk-YN-myd" secondAttribute="bottom" constant="8" symbolic="YES" id="X5h-FL-lAy"/>
+                            <constraint firstItem="szC-e1-pjG" firstAttribute="top" secondItem="eRQ-ju-ScY" secondAttribute="bottom" constant="8" symbolic="YES" id="XhT-BV-HQ5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cvE-nt-zLZ" secondAttribute="trailing" constant="14" id="cWr-R2-Ivh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eRQ-ju-ScY" secondAttribute="trailing" constant="16" id="hJR-4d-UJf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentLocation1" destination="eRQ-ju-ScY" id="BoS-PF-ZW7"/>
+                        <outlet property="currentLocation2" destination="szC-e1-pjG" id="ufo-ub-jgF"/>
+                        <outlet property="myMap" destination="gzk-YN-myd" id="Uzb-bf-AyG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="88.605697151424295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
